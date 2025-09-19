@@ -1,0 +1,264 @@
+#drawing-extension-toolbar {
+    position: fixed !important;
+    top: 10px !important;
+    right: 30px !important;
+    z-index: 999999 !important;
+    display: flex !important;
+    gap: 8px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    pointer-events: auto !important;
+}
+
+.ext-button-group {
+    display: flex !important;
+    position: relative;
+    align-items: center !important;
+    color: #111827 !important;
+    background-color: white !important;
+    border: 1px solid #4b5563 !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.ext-btn {
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    color: #111827 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    transition: background-color 0.2s !important;
+}
+
+.ext-btn:hover {
+    background-color: #e5e7eb !important;
+}
+
+.ext-draw-btn-1 {
+    padding: 5px 12px !important; /* Reduzido de 8px 12px 6px 12px */
+}
+
+.ext-draw-btn-2 {
+    height: 100%;
+    padding: 5px 8px !important; /* Reduzido de 8px 8px 6px 8px */
+    border-left: 1px solid #e5e7eb !important;
+}
+
+.ext-rubber-btn-1 {
+    padding: 5px 12px !important; /* Reduzido de 8px 12px 6px 12px */
+}
+
+.ext-rubber-btn-2 {
+    height: 100%;
+    padding: 5px 8px !important; /* Reduzido de 8px 8px 6px 8px */
+    border-left: 1px solid #e5e7eb !important;
+}
+
+.ext-single-btn {
+    background-color: white !important;
+    border: 1px solid #4b5563 !important;
+    padding: 5px 16px !important; /* Reduzido de 8px 16px */
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #111827 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    transition: all 0.2s !important;
+}
+
+.ext-single-btn:hover {
+    background-color: #e5e7eb !important;
+    color: #111827 !important;
+}
+
+.ext-close-btn:hover {
+    background-color: #e5e7eb !important;
+}
+
+.ext-btn-content {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.ext-icon {
+    width: 20px !important;
+    height: 20px !important;
+    stroke: currentColor !important;
+    fill: none !important;
+    stroke-width: 1.5 !important;
+}
+
+.ext-icon-sm {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.ext-color-indicator {
+    background-color: #111111 !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 4px !important;
+    border: 1px solid #6b7280 !important;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 150px;
+    z-index: 10000;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.rubber-dropdown-svg {
+    width: 18px;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.linewidth-dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 150px;
+    z-index: 10000;
+}
+
+.linewidth-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.linewidth-dropdown-example {
+    background-color: #111111 !important;
+    width: 3px !important;
+    height: 18px !important;
+    border-radius: 4px !important;
+    margin-right: 8px;
+    border: 1px solid #6b7280 !important;
+}
+
+.linewidth-dropdown-input {
+    width: 35px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-left: 5px;
+    color: #333;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.linewidth-dropdown-input:focus {
+    border-color: #007acc;
+    box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.2);
+}
+
+.color-dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 150px;
+    z-index: 10000;
+}
+
+.color-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.ext-color-indicator-black {
+    background-color: #111111 !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 4px !important;
+    border: 1px solid #6b7280 !important;
+}
+
+.ext-color-indicator-white {
+    background-color: #ffffff !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 4px !important;
+    border: 1px solid #6b7280 !important;
+}
+
+.ext-color-indicator-blue {
+    background-color: #055cc0 !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 4px !important;
+    border: 1px solid #6b7280 !important;
+}
+
+.ext-color-indicator-red {
+    background-color: #f11919 !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 4px !important;
+    border: 1px solid #6b7280 !important;
+}
+
+.ext-color-indicator-green {
+    background-color: #05d405 !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 4px !important;
+    border: 1px solid #6b7280 !important;
+}
+
+.ext-color-indicator-yellow {
+    background-color: #ffde22 !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 4px !important;
+    border: 1px solid #6b7280 !important;
+}

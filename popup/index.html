@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawInChrome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="drawing-extension-toolbar">
+        <!-- Rubber Group -->
+        <div class="ext-button-group">
+            <button id="rubber-btn-1" class="ext-btn ext-rubber-btn-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><path d="M225,80.4,183.6,39a24,24,0,0,0-33.94,0L31,157.66a24,24,0,0,0,0,33.94l30.06,30.06A8,8,0,0,0,66.74,224H216a8,8,0,0,0,0-16h-84.7L225,114.34A24,24,0,0,0,225,80.4ZM108.68,208H70.05L42.33,180.28a8,8,0,0,1,0-11.31L96,115.31,148.69,168Zm105-105L160,156.69,107.31,104,161,50.34a8,8,0,0,1,11.32,0l41.38,41.38a8,8,0,0,1,0,11.31Z"></path></svg>
+            </button>
+            <button id="rubber-btn-2" class="ext-btn ext-rubber-btn-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ext-icon ext-icon-sm">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </button>
+
+            <!-- Rubber Menu -->
+            <div id="rubber-dropdown" class="dropdown-menu" style="display: none;">
+                <div id="rubber-dropdown-removeall" class="dropdown-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="rubber-dropdown-svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                    </svg>
+                    Remove All
+                </div>
+            </div>
+        </div>
+
+        <!-- Draw Group -->
+        <div class="ext-button-group">
+            <button id="draw-btn-1" class="ext-btn ext-draw-btn-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ext-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                </svg>
+            </button>
+            <button id="draw-btn-2" class="ext-btn ext-draw-btn-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ext-icon ext-icon-sm">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </button>
+
+            <!-- LineWidth -->
+            <div id="linewidth-dropdown" class="linewidth-dropdown-menu" style="display: none;">
+                <div id="linewidth-dropdown" class="linewidth-dropdown-item">
+                    <div id="linewidth-example" class="linewidth-dropdown-example"></div>
+                    LineWidth
+                    <input id="linewidth-input" class="linewidth-dropdown-input"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Button -->
+        <button id="color-btn" class="ext-single-btn">
+            <div class="ext-btn-content">
+                Color 
+                <div id="color-indicator" class="ext-color-indicator"></div>
+            </div>
+
+            <!-- Color Menu -->
+            <div id="color-dropdown" class="color-dropdown-menu" style="display: none;">
+                <div id="color-dropdown-removeall" class="color-dropdown-item">
+                    <div id="color-black" class="ext-color-indicator-black"></div>
+                    <div id="color-white" class="ext-color-indicator-white"></div>
+                    <div id="color-blue" class="ext-color-indicator-blue"></div>
+                    <div id="color-red" class="ext-color-indicator-red"></div>
+                    <div id="color-green" class="ext-color-indicator-green"></div>
+                    <div id="color-yellow" class="ext-color-indicator-yellow"></div>
+                </div>
+            </div>
+        </button>
+
+        <!-- Close Button -->
+        <button id="close-btn" class="ext-single-btn ext-close-btn">
+            <div class="ext-btn-content">
+                Close 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ext-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+        </button>
+    </div>
+    
+</body>
+</html>
