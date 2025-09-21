@@ -1,10 +1,6 @@
 # 🖍️ Drawing Extension
 
---
-
 This extension adds a floating toolbar to the browser, allowing you to draw, erase, and customize annotations directly on any website.
-
---
 
 ![PageDrawing Extension](images/pagedraw.jpg)
 
